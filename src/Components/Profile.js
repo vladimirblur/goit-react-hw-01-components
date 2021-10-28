@@ -1,43 +1,47 @@
 import propTypes from 'prop-types';
 
-export default function Profile({ profileName, profileTag, location, avatarSrc, followers, views, likes }) {
+export default function Profile({
+  profileName,
+  profileTag,
+  location,
+  avatarSrc,
+  followers,
+  views,
+  likes,
+}) {
   return (
-    <div class="profile">
-    <div class="description">
-      <img
-        src={avatarSrc}
-        alt="Аватар пользователя"
-        class="avatar"
-      />
-      <p class="name">{profileName}</p>
-      <p class="tag">@{profileTag}</p>
-      <p class="location">{location}</p>
+    <div className="profile">
+      <div className="description">
+        <img src={avatarSrc} alt="Аватар пользователя" className="avatar" />
+        <p className="name">{profileName}</p>
+        <p className="tag">@{profileTag}</p>
+        <p className="location">{location}</p>
+      </div>
+
+      <ul className="stats">
+        <li>
+          <span className="label">Followers</span>
+          <span className="quantity">{followers}</span>
+        </li>
+        <li>
+          <span className="label">Views</span>
+          <span className="quantity">{views}</span>
+        </li>
+        <li>
+          <span className="label">Likes</span>
+          <span className="quantity">{likes}</span>
+        </li>
+      </ul>
     </div>
-
-    <ul class="stats">
-      <li>
-        <span class="label">Followers</span>
-        <span class="quantity">{followers}</span>
-      </li>
-      <li>
-        <span class="label">Views</span>
-        <span class="quantity">{views}</span>
-      </li>
-      <li>
-        <span class="label">Likes</span>
-        <span class="quantity">{likes}</span>
-      </li>
-    </ul>
-  </div>);
-};
-
+  );
+}
 
 Profile.propTypes = {
   profileName: propTypes.string.isRequired,
-  profileTag:propTypes.string.isRequired,
-  location:propTypes.string.isRequired,
-  avatarSrc:propTypes.string.isRequired,
-  followers:propTypes.number.isRequired,
-  views:propTypes.number.isRequired,
-  likes:propTypes.number.isRequired,
-}
+  profileTag: propTypes.string.isRequired,
+  location: propTypes.string.isRequired,
+  avatarSrc: propTypes.string.isRequired,
+  followers: propTypes.number.isRequired,
+  views: propTypes.number.isRequired,
+  likes: propTypes.number.isRequired,
+};
