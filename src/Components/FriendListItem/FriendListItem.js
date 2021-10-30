@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import defaultImage from '../../default.jpg';
+import defaultImage from './default.jpg';
 import styles from './FriendListItem.module.css';
 
 export default function FriendListItem({ imageUrl, name, isOnline }) {
@@ -9,15 +9,15 @@ export default function FriendListItem({ imageUrl, name, isOnline }) {
     : statusClasses.push(styles.offline);
 
   return (
-    <>
+    <li className={styles.item}>
       {isOnline ? (
         <span className={statusClasses.join(' ')}></span>
       ) : (
         <span className={statusClasses.join(' ')}></span>
       )}
-      <img className="avatar" src={imageUrl} alt={name} width="48" />
+      <img className={styles.avatar} src={imageUrl} alt={name} width="48" />
       <p className="name">{name}</p>
-    </>
+    </li>
   );
 }
 
@@ -31,17 +31,3 @@ FriendListItem.defaultProps = {
   imageUrl: defaultImage,
   name: 'unknown',
 };
-
-// const Button = ({ type = 'button', label, disabled }) => {
-//   const btnClasses = [styles.button];
-
-//   if (disabled) {
-//     btnClasses.push(styles.disabled);
-//   }
-
-//   return (
-//     <button className={btnClasses.join(' ')} type={type} disabled={disabled}>
-//       {label}
-//     </button>
-//   );
-// };

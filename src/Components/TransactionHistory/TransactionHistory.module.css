@@ -1,0 +1,23 @@
+.transactionHistory {
+  text-align: center;
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%);
+  border-radius: 5px;
+}
+
+.labelRow {
+  background-color: #00bcd5;
+  color: #fff;
+}
+
+.label {
+  padding: 7px 50px 7px 50px;
+}
+
+.tansactionData {
+  padding: 7px 50px 7px 50px;
+}
+
+.rows:nth-child(2n) {
+  background-color: #ecf1f4;
+}
