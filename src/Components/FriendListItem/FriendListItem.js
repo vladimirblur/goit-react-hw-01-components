@@ -10,11 +10,7 @@ export default function FriendListItem({ imageUrl, name, isOnline }) {
 
   return (
     <li className={styles.item}>
-      {isOnline ? (
-        <span className={statusClasses.join(' ')}></span>
-      ) : (
-        <span className={statusClasses.join(' ')}></span>
-      )}
+      <span className={statusClasses.join(' ')}></span>
       <img className={styles.avatar} src={imageUrl} alt={name} width="48" />
       <p className="name">{name}</p>
     </li>

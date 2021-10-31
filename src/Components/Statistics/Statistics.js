@@ -14,7 +14,7 @@ export default function Statistics({ stats, title }) {
             style={{ backgroundColor: stat.color }}
           >
             <span className={s.label}>{stat.label}</span>
-            <span className={s.percentage}>{`${stat.percentage}%`}</span>
+            <span className={s.percentage}>{stat.percentage}%</span>
           </li>
         ))}
       </ul>
